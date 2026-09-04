@@ -68,7 +68,7 @@ public class ActivityController {
         String comment = commentMap.get("comment");
         Activity updatedActivity = this.activityService.addActivityComment(activityId, comment);
         ActivityDto updatedActivityDto = this.activityToActivityDtoConverter.convert(updatedActivity);
-        return new Result(true, StatusCode.SUCCESS, "Add comment successfully", null);
+        return new Result(true, StatusCode.SUCCESS, "Add comment successfully", updatedActivityDto);
     }
 
 }
